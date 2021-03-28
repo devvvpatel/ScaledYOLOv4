@@ -65,7 +65,7 @@ def test(data,
     with open(data) as f:
         data = yaml.load(f, Loader=yaml.FullLoader)  # model dict
     nc = 1 if single_cls else int(data['nc'])  # number of classes
-    iouv = torch.linspace(0.5, 0.95, 10).to(device)  # iou vector for mAP@0.5:0.95
+    iouv = torch.linspace(0.2, 0.3, 10).to(device)  # iou vector for mAP@0.2:0.3
     niou = iouv.numel()
 
     # Dataloader
